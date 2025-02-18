@@ -1,8 +1,34 @@
 
+# 🛒 E-Shop
 
-## Getting Started
+E-Shop is an online store built with **Next.js**, **React**, **Tailwind CSS**, and **FakeStoreAPI**. It allows users to browse products, add them to the cart, and simulate a shopping experience.
 
-First, run the development server:
+## 🚀 Getting Started
+
+### 1️⃣ Installation
+
+Clone the repository and navigate to the project folder:
+
+```bash
+git clone https://github.com/your-username/eshop.git
+cd eshop
+```
+
+Install dependencies using **npm**, **yarn**, **pnpm**, or **bun**:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+### 2️⃣ Run in Development Mode
+
+Start the development server with:
 
 ```bash
 npm run dev
@@ -14,23 +40,39 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎨 Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js** - Framework for React with hybrid rendering.
+- **React** - Library for building user interfaces.
+- **Tailwind CSS** - Utility-first CSS framework for fast and responsive design.
+- **FakeStoreAPI** - Product API to simulate an online store.
 
-## Learn More
+## 🛠 Features
 
-To learn more about Next.js, take a look at the following resources:
+✔️ Product listing with images, names, and prices.
+✔️ Shopping cart with add, remove, and quantity modification functionalities.
+✔️ Cart persistence using `localStorage`.
+✔️ Checkout page with total amount summary.
+✔️ Navigation bar with product search.
+✔️ Responsive and minimalistic design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+📦 eshop
+├── 📂 app
+│   ├── 📄 page.tsx (Main page with product listing)
+│   ├── 📂 cart (Shopping cart page)
+│   ├── 📂 checkout (Checkout page)
+│   ├── 📂 components (Reusable components)
+│   ├── 📂 lib (Types and helper functions)
+├── 📄 package.json (Dependencies and scripts)
+├── 📄 tailwind.config.js (Styling configuration)
+├── 📄 README.md (This file)
+```
 
-## Deploy on Vercel
+## Project Phase
+[ Beta ]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
