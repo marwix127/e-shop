@@ -13,18 +13,18 @@ export default function CartPage() {
       ...product,
       quantity: product.quantity ?? 1, // 👈 Nos aseguramos de que `quantity` nunca sea undefined
     }));
-  
+
     setCart(storedCart);
     setTotal(storedCart.reduce((acc: number, product) => acc + product.price * (product.quantity ?? 1), 0)); // 👈 Aquí también evitamos undefined
   }, []);
-  
+
   const handleRemove = (productId: number) => {
     const updatedCart = cart.filter((item) => item.id !== productId);
     setCart(updatedCart);
     setTotal(updatedCart.reduce((acc, item) => acc + item.price * (item.quantity ?? 1), 0)); // 👈 Aquí aseguramos que `quantity` no sea undefined
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
-  
+
 
   const handleChangeQuantity = (productId: number, change: number) => {
     const updatedCart = cart.map((item) =>
@@ -32,12 +32,12 @@ export default function CartPage() {
         ? { ...item, quantity: Math.max(1, (item.quantity ?? 1) + change) } // 👈 Aseguramos que siempre tenga un número válido
         : item
     );
-  
+
     setCart(updatedCart);
     setTotal(updatedCart.reduce((acc, item) => acc + item.price * (item.quantity ?? 1), 0)); // 👈 Aquí también
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
-  
+
 
   return (
     <div className="p-6">
@@ -68,14 +68,28 @@ export default function CartPage() {
               </button>
             </div>
           ))}
-          <div className="text-right text-lg font-bold mt-4">
+          <div className="text-right text-xl font-bold mt-4">
             Total: ${total.toFixed(2)}
           </div>
         </div>
       )}
-      <Link href="/" className="block mt-6 text-blue-600 hover:underline">
-        ← Seguir comprando
-      </Link>
+     <div className="flex justify-between items-center mt-6">
+  <Link
+    href="/"
+    className="px-4 py-2 font-bold text-white bg-black border-2 border-black rounded-2xl
+      hover:bg-white hover:text-black transition"
+  >
+    ← Seguir comprando
+  </Link>
+
+  <Link
+    href="/checkout"
+    className="px-6 py-2 font-bold text-white bg-black border-2 border-black rounded-2xl
+      hover:bg-white hover:text-black transition"
+  >
+    Pagar
+  </Link>
+</div>
     </div>
   );
 }
