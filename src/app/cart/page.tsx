@@ -40,12 +40,14 @@ export default function CartPage() {
 
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">🛒 Carrito de Compras</h1>
+    < >
+    <h1 className="text-3xl font-bold mb-4 mt-5 p-6">🛒 Carrito de Compras</h1>
+    <hr className="border-t-2 border-gray-500 mx-5 p-6" />
+    <div className="p-6 mx-10 bg-gray-100 rounded-lg">
       {cart.length === 0 ? (
         <p className="text-gray-500">Tu carrito está vacío.</p>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-4 mt-10 ">
           {cart.map((product) => (
             <div key={product.id} className="border p-4 rounded-lg flex justify-between items-center bg-white">
               <div className="flex items-center gap-4">
@@ -91,5 +93,6 @@ export default function CartPage() {
   </Link>
 </div>
     </div>
+    </>
   );
 }
