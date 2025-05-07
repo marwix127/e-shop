@@ -6,7 +6,7 @@ import useProducts from "./hooks/useProducts";
 import { useCart } from "./hooks/useCart";
 
 export default function Home() {
-  const { products, filteredProducts, loading, sortOption, setSortOption, handleSearch } = useProducts();
+  const {filteredProducts, loading, sortOption, setSortOption, handleSearch } = useProducts();
   const { cart, handleAddToCart } = useCart();
 
 

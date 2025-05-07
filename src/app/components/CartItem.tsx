@@ -12,8 +12,8 @@ export default function CartItem({ product, onRemove, onChangeQuantity }: CartIt
       <div className="flex items-center gap-4">
         <img src={product.image} alt={product.title} className="w-16 h-16 object-contain" />
         <div>
-          <h2 className="text-lg font-semibold">{product.title}</h2>
-          <p className="text-gray-600">${product.price.toFixed(2)}</p>
+          <h2 className="text-lg text-black font-semibold">{product.title}</h2>
+          <p className="text-black">${product.price.toFixed(2)}</p>
           <div className="flex items-center gap-2">
             <button onClick={() => onChangeQuantity(product.id, -1)} className="bg-gray-200 px-2 py-1 rounded-md">➖</button>
             <span className="text-lg">{product.quantity}</span>

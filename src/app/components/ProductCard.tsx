@@ -9,7 +9,7 @@ export default function ProductCard({ product, onAddToCart }: ProductCardProps) 
   return (
     <div className="border rounded-lg shadow-md p-4 bg-white flex flex-col h-full">
       <img src={product.image} alt={product.title} className="w-full h-40 object-contain" />
-      <h2 className="text-lg font-semibold mt-2">{product.title}</h2>
+      <h2 className="text-lg text-black font-semibold mt-2">{product.title}</h2>
       <p className="text-gray-600">${product.price}</p>
       
       {/* Contenedor flexible que empuja el botón hacia abajo */}
