@@ -16,16 +16,16 @@ export default function Navbar({ onSearch, cartCount }: NavbarProps) {
         type="text"
         onChange={(e) => onSearch(e.target.value)}
         placeholder="Buscar productos..."
-        className="px-3 py-2 text-black rounded-md w-60"
+        className="px-3 py-2 text-black placeholder-gray-700 rounded-md w-60"
       />
       <button className="relative bg-white text-black px-4 py-2 rounded-md">
-  <Link href="/cart">🛒 Carrito</Link>
-  {cartCount > 0 && (
-    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
-      {cartCount}
-    </span>
-  )}
-</button>
+        <Link href="/cart">🛒 Carrito</Link>
+        {cartCount > 0 && (
+          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+            {cartCount}
+          </span>
+        )}
+      </button>
     </nav>
   );
 }

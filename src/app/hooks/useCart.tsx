@@ -49,5 +49,11 @@ export function useCart() {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  return { cart, total,handleAddToCart , handleRemove, handleChangeQuantity };
+  const clearCart = () => {
+    setCart([]);
+    setTotal(0);
+    localStorage.removeItem("cart");
+  };
+
+  return { cart, total, handleAddToCart, handleRemove, handleChangeQuantity, clearCart };
 }

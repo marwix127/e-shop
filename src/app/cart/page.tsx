@@ -9,14 +9,14 @@ export default function CartPage() {
 
   return (
     <>
-     <nav className="bg-black text-white p-6 flex justify-between items-center">
-     <h1 className="text-3xl font-extrabold italic tracking-wide text-white">E-SHOP</h1>
-     </nav>
+      <nav className="bg-black text-white p-6 flex justify-between items-center">
+        <h1 className="text-3xl font-extrabold italic tracking-wide text-white">E-SHOP</h1>
+      </nav>
       <h1 className="text-3xl font-bold mb-4 mt-5 p-6">🛒 Carrito de Compras</h1>
       <hr className="border-t-2 border-gray-500 mx-5 p-6" />
       <div className="p-6 mx-10 bg-gray-100 rounded-lg">
         {cart.length === 0 ? (
-          <p className="text-gray-500">Tu carrito está vacío.</p>
+          <p className="text-gray-700">Tu carrito está vacío.</p>
         ) : (
           <div className="space-y-4 mt-10">
             {cart.map((product) => (
@@ -27,7 +27,7 @@ export default function CartPage() {
                 onChangeQuantity={handleChangeQuantity}
               />
             ))}
-            <div className="text-right text-xl font-bold mt-4">
+            <div className="text-right text-black text-xl font-bold mt-4">
               Total: ${total.toFixed(2)}
             </div>
           </div>
