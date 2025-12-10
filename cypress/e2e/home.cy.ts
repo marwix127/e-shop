@@ -6,13 +6,13 @@ describe('Home Page & Discovery Flow', () => {
         cy.visit('/');
     });
 
-    it('displays the homepage correctly', () => {
+    it('should display the homepage correctly', () => {
         cy.wait('@getProducts');
         cy.contains('E-SHOP').should('be.visible');
         cy.get('input[placeholder="Buscar productos..."]').should('be.visible');
     });
 
-    it('displays the products requested from API', () => {
+    it('should display the products requested from API', () => {
         cy.wait('@getProducts');
         // Verificamos que se hayan renderizado productos (el grid de productos)
         // Buscamos elementos que tengan el estilo de las cards
@@ -30,13 +30,13 @@ describe('Home Page & Discovery Flow', () => {
         cy.get('button:contains("Añadir al carrito")').should('have.length.lt', 10);
     });
 
-    it('shows empty state when product not found', () => {
+    it('should show empty state when product not found', () => {
         cy.wait('@getProducts');
         cy.get('input[placeholder="Buscar productos..."]').type('unicornio mágico');
         cy.contains('No se encontraron productos.').should('be.visible');
     });
 
-    it('sorts products by price ascending (Low to High)', () => {
+    it('should sort products by price ascending (Low to High)', () => {
         cy.wait('@getProducts');
 
         // Seleccionar opción de menor a mayor
@@ -59,7 +59,7 @@ describe('Home Page & Discovery Flow', () => {
         });
     });
 
-    it('sorts products by price descending (High to Low)', () => {
+    it('should sort products by price descending (High to Low)', () => {
         cy.wait('@getProducts');
 
         cy.get('select').select('price_desc');
