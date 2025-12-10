@@ -21,6 +21,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "cypress": "^15.7.1",
+    "cypress-mochawesome-reporter": "^4.0.2",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "postcss": "^8",

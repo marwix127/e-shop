@@ -27,7 +27,7 @@ export default function CartPage() {
                 onChangeQuantity={handleChangeQuantity}
               />
             ))}
-            <div className="text-right text-black text-xl font-bold mt-4">
+            <div className="text-right text-black text-xl font-bold mt-4" data-testid="cart-total">
               Total: ${total.toFixed(2)}
             </div>
           </div>
